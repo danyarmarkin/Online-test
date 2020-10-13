@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main_css.css">
+
+    <script type="text/x-mathjax-config">
+    		  MathJax.Hub.Config({
+    			extensions: ["tex2jax.js"],
+    			TeX: {
+    				extensions: ["autoload-all.js", "AMSmath.js","AMSsymbols.js"],
+    				Macros: {
+    					tg: ['\\mathop{\\rm tg}\\nolimits', 0],
+    					ctg: ['\\mathop{\\rm ctg}\\nolimits', 0],
+    					cosec: ['\\mathop{\\rm cosec}\\nolimits', 0],
+    					sec: ['\\mathop{\\rm sec}\\nolimits', 0],
+    					arctg: ['\\mathop{\\rm arctg}\\nolimits', 0],
+    					arcctg: ['\\mathop{\\rm arcctg}\\nolimits', 0],
+    					sh: ['\\mathop{\\rm sh}\\nolimits', 0],
+    					ch: ['\\mathop{\\rm ch}\\nolimits', 0],
+    					th: ['\\mathop{\\rm th}\\nolimits', 0],
+    					cth: ['\\mathop{\\rm cth}\\nolimits', 0],
+    					sign: ['\\mathop{\\rm sign}\\nolimits', 0],
+    				}
+    				},
+    			jax: ["input/TeX","output/HTML-CSS"],
+    			tex2jax: {inlineMath: [["$","$"]]},
+    		  });
+        </script>
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+    <title>Edit test</title>
+  </head>
+  <body>
+
+    <select class="" name="">
+      <option value=""><p>Выберите тест</p></option>
+      <option value=""><p>Математика: летучка 13.10.2020</p></option>
+      <option value=""><p>Физика: контрольная 13.10.2020</p></option>
+    </select>
+
+    <br><br><br>
+
+    <p>Идентификатор теста</p>
+    <input type="text" name="" value="xxxxxxxx" disabled>
+
+    <br><br><br>
+
+    <select class="" name="">
+      <option value=""><p>Выберите задание</p></option>
+      <option value=""><p>1</p></option>
+      <option value=""><p>2</p></option>
+      <option value=""><p>3</p></option>
+      <option value=""><p>4</p></option>
+    </select>
+
+    <button type="button" name="button"> <p>Добавить задание</p> </button>
+
+    <br>
+
+    <textarea name="name" rows="8" cols="80" id="input_tex"></textarea>
+    <br>
+    <div class="tex" id = "output_tex">
+
+    </div>
+    <button type="button" name="button" onclick="compileTex()"> <p>Верстка</p> </button><br><br><br>
+    <button type="button" name="button"> <p>Сохранить задание</p> </button>
+
+
+    <script src="EditTest.js"></script>
+  </body>
+</html>

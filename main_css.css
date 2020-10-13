@@ -22,3 +22,37 @@ button{
 }
 button:hover { background: rgba(255,255,255,.2); }
 button:active { background: #4F4F4F; }
+select{
+  width: 25%;
+  padding: 12px 20px;
+  font-size: 18px;
+  margin: 8px 0;
+  border: 3px solid #3B6303;
+  border-radius: 4px;
+  background: transparent;
+  color: grey
+}
+select:hover { background: rgba(255,255,255,.2); }
+select:active { background: #4F4F4F; }
+textarea{
+  width: 90%;
+  height: 48px
+  padding: 12px 20px;
+  font-size: 18px;
+  margin: 8px 0;
+  border: 3px solid #3B6303;
+  border-radius: 4px;
+  background: transparent;
+  color: white
+}
+div.tex{
+  width: 90%;
+  height: 48px
+  padding: 12px 20px;
+  font-size: 18px;
+  margin: 8px 0;
+  border: 3px solid #CC5500;
+  border-radius: 4px;
+  background: transparent;
+  color: white
+}
