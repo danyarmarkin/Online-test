@@ -1,0 +1,24 @@
+body{
+  background: #424242;
+}
+p{
+  color: white;
+  font-family: "Century Gothic"
+}
+input[type=text] {
+  background: transparent;
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 3px solid #3B6303;
+  border-radius: 4px;
+  font-size: 18px;
+  color: white
+}
+button{
+  border: 3px solid #3B6303;
+  border-radius: 4px;
+  background: transparent;
+}
+button:hover { background: rgba(255,255,255,.2); }
+button:active { background: #4F4F4F; }
