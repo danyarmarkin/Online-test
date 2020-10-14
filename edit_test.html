@@ -44,11 +44,11 @@
     <br><br><br>
 
     <p>Идентификатор теста</p>
-    <input type="text" name="" value="xxxxxxxx" disabled>
+    <input type="text" name="" value="xxxxxxxx" id="test_id" disabled>
 
     <br><br><br>
 
-    <select class="" name="">
+    <select class="" name="" onchange="loadNumber()" id="select_number">
       <option value=""><p>Выберите задание</p></option>
       <option value=""><p>1</p></option>
       <option value=""><p>2</p></option>
@@ -60,15 +60,44 @@
 
     <br>
 
+    <p>Текст задания</p>
     <textarea name="name" rows="8" cols="80" id="input_tex"></textarea>
     <br>
-    <div class="tex" id = "output_tex">
-
-    </div>
+    <p>Ответ  (только в TeX, без '$')</p>
+    <textarea name="name" rows="8" cols="20" id="input_answer"></textarea>
+    <br>
+    <p>Текст задания</p>
+    <div class="tex" id = "output_tex"></div>
+    <br>
+    <p>Ответ</p>
+    <div class="tex" id = "output_tex_answer"></div>
     <button type="button" name="button" onclick="compileTex()"> <p>Верстка</p> </button><br><br><br>
-    <button type="button" name="button"> <p>Сохранить задание</p> </button>
+    <button type="button" name="button" onclick="newQuestion()"> <p>Сохранить задание</p> </button>
 
 
     <script src="EditTest.js"></script>
+
+    <!-- FIREBASE CONFIG  -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDEAR6Li42tIKbQ3XuyHHzQZBbkXv-HnFk",
+        authDomain: "onlinetest-e2140.firebaseapp.com",
+        databaseURL: "https://onlinetest-e2140.firebaseio.com",
+        projectId: "onlinetest-e2140",
+        storageBucket: "onlinetest-e2140.appspot.com",
+        messagingSenderId: "60078891411",
+        appId: "1:60078891411:web:67816d0ea8d8bfae5ac866",
+        measurementId: "G-L5PN4SDF1Z"
+      };
+  // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="database_init.js"></script>
+    <script src="database_queries.js"></script>
+
   </body>
 </html>
