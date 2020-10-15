@@ -18,20 +18,17 @@ function signIn(){
   //   // ...
   // });
   // Using a redirect.
-firebase.auth().getRedirectResult().then(function(result) {
-  if (result.credential) {
-    // This gives you a Google Access Token.
-    var token = result.credential.accessToken;
-    document.location.href = "main.html";
-  }
-  var user = result.user;
-});
-
-// Start a sign in process for an unauthenticated user.
-
-provider.addScope('profile');
-provider.addScope('email');
-firebase.auth().signInWithRedirect(provider);
+  // Using a popup.
+  var provider = new firebase.auth.GoogleAuthProvider();
+  provider.addScope('profile');
+  provider.addScope('email');
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+   // This gives you a Google Access Token.
+   var token = result.credential.accessToken;
+   // The signed-in user info.
+   var user = result.user;
+   document.location.href = "main.html";
+  });
 }
 function signOut() {
   firebase.auth().signOut().then(function() {
