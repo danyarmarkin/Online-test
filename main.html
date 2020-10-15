@@ -6,6 +6,7 @@
     <title>Online test</title>
   </head>
   <body>
+    <button type="button" name="button" onclick="signOut()"><p>Выйти</p></button> <br><br>
     <input type="text" name="" value="" >
     <button type="button" name="button"><p>Добавить тест</p></button>
     <p>Работы</p> <br><br><br>
@@ -19,5 +20,30 @@
     </div>
 
     <a href="edit_test.html"><button type="button" name="button">  <p>Редактировать тесты</p> </button></a>
+
+
+
+    <!-- FIREBASE CONFIG  -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDEAR6Li42tIKbQ3XuyHHzQZBbkXv-HnFk",
+        authDomain: "onlinetest-e2140.firebaseapp.com",
+        databaseURL: "https://onlinetest-e2140.firebaseio.com",
+        projectId: "onlinetest-e2140",
+        storageBucket: "onlinetest-e2140.appspot.com",
+        messagingSenderId: "60078891411",
+        appId: "1:60078891411:web:67816d0ea8d8bfae5ac866",
+        measurementId: "G-L5PN4SDF1Z"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="database_init.js"></script>
+    <script src="database_queries.js"></script>
+    <script src="auth_init.js"></script>
   </body>
 </html>

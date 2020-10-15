@@ -56,7 +56,7 @@
       <option value=""><p>4</p></option>
     </select>
 
-    <button type="button" name="button"> <p>Добавить задание</p> </button>
+    <button type="button" name="button" onclick="newTask()"> <p>Добавить задание</p> </button>
 
     <br>
 
@@ -72,14 +72,16 @@
     <p>Ответ</p>
     <div class="tex" id = "output_tex_answer"></div>
     <button type="button" name="button" onclick="compileTex()"> <p>Верстка</p> </button><br><br><br>
-    <button type="button" name="button" onclick="newQuestion()"> <p>Сохранить задание</p> </button>
+    <button type="button" name="button" onclick="newQuestion()" id="save_button"> <p>Сохранить задание</p> </button>
 
 
     <script src="EditTest.js"></script>
+    <script src="auth_init.js"></script>
 
     <!-- FIREBASE CONFIG  -->
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
     <script>
       var firebaseConfig = {
@@ -98,6 +100,7 @@
     </script>
     <script src="database_init.js"></script>
     <script src="database_queries.js"></script>
+    <script src="auth_init.js"></script>
 
   </body>
 </html>
