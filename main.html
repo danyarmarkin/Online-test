@@ -5,24 +5,23 @@
     <link rel="stylesheet" href="main_css.css">
     <title>Online test</title>
   </head>
-  <body>
-    <button type="button" name="button" onclick="signOut()"><p>Выйти</p></button> <br><br>
+  <body onload="getAllTests('main')">
+    <!-- <button type="button" name="button" onclick="signOut()"><p>Выйти</p></button> <br><br> -->
     <input type="text" name="" value="" >
-    <button type="button" name="button"><p>Добавить тест</p></button>
+    <button type="button" name="button" ><p>Добавить тест</p></button>
     <p>Работы</p> <br><br><br>
     <p>Мои тесты</p>
-    <button type="button" name="button"> <p>Создать тест</p> </button>
-    <div class="">
-      <ul>
-        <li><p>Математика: летучка 13.10.2020</p></li>
-        <li><p>Физика: контрольная 13.10.2020</p></li>
+    <button type="button" name="button" onclick="newTest()"> <p>Создать тест</p> </button>
+    <a href="edit_test.html"><button type="button" name="button">  <p>Редактировать тесты</p> </button></a>
+    <div class="" id="div_tests_list">
+      <ul id="tests_list">
       </ul>
     </div>
 
-    <a href="edit_test.html"><button type="button" name="button">  <p>Редактировать тесты</p> </button></a>
 
 
 
+    <script src="MainActivity.js"></script>
     <!-- FIREBASE CONFIG  -->
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
@@ -44,6 +43,6 @@
     </script>
     <script src="database_init.js"></script>
     <script src="database_queries.js"></script>
-    <script src="auth_init.js"></script>
+    <!-- <script src="auth_init.js"></script> -->
   </body>
 </html>

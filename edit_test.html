@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="main_css.css">
-
     <script type="text/x-mathjax-config">
     		  MathJax.Hub.Config({
     			extensions: ["tex2jax.js"],
@@ -33,13 +32,14 @@
 
     <title>Edit test</title>
   </head>
-  <body>
-
-    <select class="" name="">
-      <option value=""><p>Выберите тест</p></option>
-      <option value=""><p>Математика: летучка 13.10.2020</p></option>
-      <option value=""><p>Физика: контрольная 13.10.2020</p></option>
-    </select>
+  <body onload="getAllTests('edit_test')">
+    <div class="" id="div_select_test">
+      <select class="" name="" id="select_test" onchange="loadTestId()">
+        <option value=""><p>Выберите тест</p></option>
+        <option value=""><p>Математика: летучка 13.10.2020</p></option>
+        <option value=""><p>Физика: контрольная 13.10.2020</p></option>
+      </select>
+    </div>
 
     <br><br><br>
 
@@ -47,14 +47,15 @@
     <input type="text" name="" value="xxxxxxxx" id="test_id" disabled>
 
     <br><br><br>
-
-    <select class="" name="" onchange="loadNumber()" id="select_number">
-      <option value=""><p>Выберите задание</p></option>
-      <option value=""><p>1</p></option>
-      <option value=""><p>2</p></option>
-      <option value=""><p>3</p></option>
-      <option value=""><p>4</p></option>
-    </select>
+    <div class="" id="div_select_task">
+      <select class="" name="" onchange="loadNumber()" id="select_number">
+        <option value=""><p>Выберите задание</p></option>
+        <option value=""><p>1</p></option>
+        <option value=""><p>2</p></option>
+        <option value=""><p>3</p></option>
+        <option value=""><p>4</p></option>
+      </select>
+    </div>
 
     <button type="button" name="button" onclick="newTask()"> <p>Добавить задание</p> </button>
 
@@ -76,7 +77,6 @@
 
 
     <script src="EditTest.js"></script>
-    <script src="auth_init.js"></script>
 
     <!-- FIREBASE CONFIG  -->
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
@@ -100,7 +100,7 @@
     </script>
     <script src="database_init.js"></script>
     <script src="database_queries.js"></script>
-    <script src="auth_init.js"></script>
+    <!-- <script src="auth_init.js"></script> -->
 
   </body>
 </html>
