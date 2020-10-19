@@ -86,19 +86,20 @@ function showTaskList(n){
   var sel = document.createElement('select');
   sel.setAttribute('id', 'select_number');
   sel.setAttribute('onchange', 'loadNumber()');
-  for (var i = 0; i<=n; i++){
+
+  var p = document.createElement('p');
+  var opt = document.createElement('option');
+  p.innerHTML = "Выберите задание";
+  opt.appendChild(p);
+  sel.appendChild(opt);
+  opt.selected = true;
+  
+  for (var i = 1; i<=n; i++){
     var p = document.createElement('p');
     var opt = document.createElement('option');
-    if (i==0){
-      p.innerHTML = "Выберите задание";
-    }else{
-      p.innerHTML = i;
-    }
+    p.innerHTML = i;
     opt.appendChild(p);
     sel.appendChild(opt);
-    if (i==0){
-      opt.selected = true;
-    }
   }
   divSel.appendChild(sel);
   select = document.getElementById('select_number');
